@@ -43,3 +43,10 @@ timer: Emite valores depois de x segundos (ASYNC)
 # filter : Filtra a entrada de dados e só emite a saída para o subject apenas se satisfazer a condição
 
 # tap : Dispara efeitos secundários, usado para disparar alguma ação enquanto a informação flue pelo observable
+
+# reduce : Aplicar uma função acumuladora para um observable
+    Só emite o valor final depois que o observable se completa, então traz o valor acumulado ao longo do processo
+
+# scan: Realiza a mesma tarefa do reducer, porém emite cada valor acumulado para saída
+
+
