@@ -74,3 +74,31 @@ timer: Emite valores depois de x segundos (ASYNC)
 # sample : Emite o último valor emitido depois que um outro observable emitiu
 
 # auditTIme : Emite o último valor emitido pelo observable dentro de um determinado tempo
+
+----------------------
+
+# Operadores de transformação (Nivelamento)
+
+    Concatenam um ou mais observables em um mesmo fluxo de stream. Internamente realizam a inscrição dos observables que serão emitidos e emite a saída do valor.
+
+# MergeAll
+
+    Concatena todos os valores emitidos pelas linhas de tempo do source
+
+# MergeMap
+
+    Concatena os valores emitidos pelas linhas em vários subscribers
+
+# switchMap
+
+    Considera apeas uma única fonte de emissão dos valores e logo em seguida concatena-os
+
+# concatMap
+
+    Emite os valores para n emissões do source e cria as inscrições para cada um.
+
+    Quando o source emite um novo valor, assim que a primeira emissão terminar, continua com os próximos
+
+# exhaustMap
+
+    Emite os valores até a emissão do source se completar, ignora qualquer outro valor que seja emitido enquanto a primeira inscrição estiver em fluxo
