@@ -111,7 +111,8 @@ timer: Emite valores depois de x segundos (ASYNC)
 
 # Operadores de transformação (Nivelamento)
 
-    Concatenam um ou mais observables em um mesmo fluxo de stream. Internamente realizam a inscrição dos observables que serão emitidos e emite a saída do valor.
+    Concatenam um ou mais observables em um mesmo fluxo de stream.
+    Internamente realizam a inscrição dos observables que serão emitidos e emite a saída do valor.
 
 - MergeAll
 
@@ -134,3 +135,23 @@ timer: Emite valores depois de x segundos (ASYNC)
 - exhaustMap
 
   Emite os valores até a emissão do source se completar, ignora qualquer outro valor que seja emitido enquanto a primeira inscrição estiver em fluxo
+
+- startWith && endWith (deprecated)
+
+    Emite diretamente algum valor para saída inicial e final do observable
+
+- concat (function)
+
+    Cria um novo observable com todos os valores recebidos do source de cada emissão, enquanto o source não se completou.
+
+- merge (function)
+
+    Mescla todas as saídas do source assim que o observable se completa.
+
+- combineLatest (deprecated)
+
+    Combina os valores de saída dos observables internos até que todos tenham emitido seus valores.
+
+- forkJoin (deprecated)
+
+    Emite os diferentes valores de saída dos observables de uma só vez.
